@@ -1,0 +1,545 @@
+/* partials */
+
+@import "normalize";
+
+/*mixins*/
+
+@mixin chart-margin {
+	margin-right: 10px;
+}
+
+@mixin article {
+	padding-left: 45px;
+	line-height: 1.4;
+	width: 430px;
+	&:hover {
+	background-position: 0 -45px;
+	cursor: pointer;
+	}
+}
+
+@mixin blackLink {
+	background: url(../images/bg-links.png) center right no-repeat;
+	padding: 10px 30px 10px 10px;
+	margin-top: 10px;
+	color: yellow;
+	font-weight: lighter;
+	text-decoration: none;
+	-webkit-transition: all 1s;
+}
+
+/* dev type styles */
+
+/* custom styles */
+
+* {
+	font-weight: lighter;
+}
+
+body {
+	margin: 0;
+
+	.wrapper {
+		width: 90%;
+		margin: 0 auto;
+		position: relative;
+		max-width: 1150px;
+	}
+
+	.home {
+		background: url(../images/home-mainbg.jpg) top right no-repeat scroll;
+	}
+
+	.contact {
+		background: url(../images/contact-mainbg.png) top center no-repeat scroll;
+		min-height: 1000px;
+	}
+}
+	/* constant things */ 
+
+		/* header */
+
+		header {
+			padding-top: 125px;
+			font-size: 44px;
+
+			.navigation ul.nav {
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+
+				li a {
+					text-decoration: none;
+					color: black;
+					font-weight: lighter;
+					-webkit-transition: all 1s;
+					padding-left: 45px;
+					&:hover {
+						color: #999;
+					}
+					&.current {
+						background: url(../images/icon-nav-active.png) 0 15px no-repeat;
+					}
+				}
+			}
+		}
+
+		/* footer */
+
+		footer {
+			width: 100%;
+			clear: both;
+			background: #666 url(../images/bg-footer.png);
+			color: white;
+
+			a {
+				color: #FFDD4D;
+				text-decoration: none;
+				-webkit-transition: all 1s;
+				&:hover {
+					background: #999;
+				}
+			}
+
+			.footerInside {
+				background: url(../images/footer-map.png) center right no-repeat;
+				width: 100%;
+				margin: 0;
+				padding: 20px 100px;
+				position: relative;
+
+				.flag {
+					position: absolute;
+					background: url(../images/footer-ribbon-full.png) 0 0 no-repeat;
+					padding: 10px 30px 10px 10px;
+					width: 430px;
+					height: 105px;
+					top: -62px;
+					right:-10px;
+					color: white;
+					font-size: 13px;
+					
+					img.heather {
+						border-radius: 50%;
+						float: left;
+					}
+
+					p {
+						float: left;
+						width: 275px;
+						margin: 0 auto;
+						padding: 10px 0 0 10px;
+					}
+
+					article {
+						&.twitter {
+							@include article;
+							background: url(../images/icon-footer-twitter-40x45.png) 0 0 no-repeat;
+							margin-bottom: 30px;
+						}
+						&.email {
+							@include article;
+							background: url(../images/icon-footer-email-40x45.png) 0 0 no-repeat;
+						}
+						}
+					}
+
+					.credit {
+						font-size: 12px;
+						line-height: 1.5;
+					}
+				}
+			}
+
+		/* homepage */
+
+		/* blog thing */
+
+		.blog {
+			position: absolute;
+			right: 10%;
+			top: 40%;
+			opacity: 0.7;
+			-webkit-transition: all 0.5s;
+			&:hover {
+				opacity: 1;
+				margin-top: 25px;
+			}
+		}
+
+		/* about/bio  */
+
+		.about {
+			padding-left: 45px;
+
+			.heatherMobile,
+			.heatherContactMobile {
+				display: none;
+			}
+
+			p {
+				width: 33%;
+				line-height: 2;
+				font-weight: lighter;
+				font-size: 14px;
+				&:nth-child(2) {
+					margin-bottom: 40px;
+				}
+				&.main, &.contactMain {
+					font-size: 20px;
+					line-height: 1.5;
+				}
+			}
+
+			a {
+				text-decoration: none;
+				color: #1CADB4;
+				&.black {
+					@include blackLink;
+						&:hover {
+							padding: 10px 30px 10px 30px;
+							color: #bada55;
+						}
+				}
+			}
+		}
+
+		/* 'my life' chart */
+
+		.chart {
+			width: 100%;
+			background: url(../images/bg-stripe.png);
+			margin-top: 100px;
+			padding: 20px 10px 100px 10px;
+
+			.piechart {
+				width: 30%;
+				float: left;
+				margin-right: 1%;
+			}
+
+			.items {
+
+				width: 33%;
+				float: left;
+				margin-left: 1%;
+
+				.item {
+				width: 100%;
+				}
+
+				.arrow, .number {
+					@include chart-margin;
+				}
+
+				/* arrow size and colours */
+
+				.arrow {
+					font-size: 40px;
+					height: 40px;
+					&.blizzard {
+						color: #A1E8E8;
+					}
+					&.turquoise {
+						color: #2AE1E6;
+					}
+					&.verdigris {
+						color: #33ADB5;
+					}
+					&.canary {
+						color: #FFF200;
+					}
+					&.yellowGreen {
+						color: #72DC28;
+					}
+					&.lemon {
+						color: #FFDE17;
+					}
+					&.bahia {
+						color: #ACC728;
+					}
+
+				}
+
+				.number {
+					font-size: 24px;
+					font-weight: lighter;
+					
+					.percent {
+						color: #999;
+					}
+				}
+			}
+
+				img {
+					border-radius: 50%;
+					margin: -60px 0 0 0;
+				}
+		}
+
+	/* contact page */
+
+	/* content block */
+
+		.content {
+			width: 70%;
+			float: left;
+			margin-bottom: 50px;
+
+			.form {
+				margin-top: 10%;
+				margin-left: 1%;
+
+				input {
+					display: block;
+					width: 90%;
+					margin-bottom: 10px;
+					border: 0;
+					background: #E9F7F8;
+					border-left: 2px solid #3BD4D6;
+					padding: 10px;
+					font-weight: lighter;
+					&.message {
+						height: 200px;
+					}
+					&.submit, &.reset {
+						display: inline;
+						width: auto;
+						border: 0;
+					}
+					&.reset {
+						background-color: white;
+					}
+				}
+			}
+		}
+
+	/* sidebar */
+
+		.sidebar {
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: url(../images/bg-stripe.png) repeat;
+			width: 30%;
+			padding: 40px;
+
+
+			.tweet {
+				width: 300px;
+				height: 300px;
+				padding: 60px 40px;
+				border-radius: 50%;
+				background: RGBA(56, 212, 214, 0.85);
+				z-index: 999999;
+				margin-top: -75px;
+				margin-left: -40px;
+
+				.date {
+					text-transform: uppercase;
+					font-size: 10px;
+				}
+
+				.latestTweet {
+					color: white;
+					font-size: 12px;
+					line-height: 1.5;
+				}
+
+				.twitterName {
+					margin: 10px 0 0 125px;
+				}
+			}
+
+			.findMe {
+				margin-top: 150px;
+				
+				h3 {
+					margin: 0;
+
+					&:first-child {
+						margin-top: 20px;
+					}
+					&.projects {
+						margin-top: 100px;
+					}
+				}
+				p {
+					margin-top: 0;
+				}
+				article {
+					padding-left: 50px;
+					height: 45px;
+
+					&.twitter {
+						background: url(../images/icon-contact-twitter.png) 0 0 no-repeat;
+					}
+					&.facebook {
+						background: url(../images/icon-contact-facebook.png) 0 0 no-repeat;
+					}
+					&.linkedIn {
+						background: url(../images/icon-contact-linkedin.png) 0 0 no-repeat;
+					}
+					&.email {
+						background: url(../images/icon-contact-email.png) 0 0 no-repeat;
+					}
+					&.skype {
+						background: url(../images/icon-contact-skype.png) 0 0 no-repeat;
+					}
+					&.hackerYou {
+						background: url(../images/icon-contact-hackeryou.png) 0 0 no-repeat;
+					}
+					&.ladiesLearningCode {
+						background: url(../images/icon-contact-ladieslearningcode.png) 0 0 no-repeat;
+					}
+					&.hiveToronto {
+						background: url(../images/icon-contact-hive.png) 0 0 no-repeat;
+					}
+					&.womenOfDistinction {
+						background: url(../images/icon-contact-womenofdistinction.png) 0 0 no-repeat;
+					}
+					&:hover {
+						background-position: 0 -45px;
+							cursor: pointer;
+					}
+				}
+			}
+		}
+/* <dalek> RESPSONSIVATE! </dalek> */
+
+/* slightly narrower desktop/laptop */
+
+@media (max-width:1130px) {
+	body {
+		.wrapper {
+			width: 100%;
+		}
+	}
+}
+
+/* tablets */
+
+@media (max-width: 990px) {
+	body {
+		.home {
+			background-position: 100px 0;
+		}
+	}
+
+	.content  {
+		width: 100%;
+		float: none;
+	}
+
+	.sidebar { 
+		position: relative;
+		width: 100%;
+		float: none;
+		.tweet {
+			margin: 0;
+			padding: 20px;
+			border-radius: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+/* phones */
+
+@media (max-width: 768px) {
+	body {
+		.wrapper {
+			&.home, &.contact {
+				background: none;
+			}
+		}
+		header {
+			background: #2AE1E6;
+			padding: 0 0 10px 0;
+			text-align: center;
+			position: fixed;
+			width: 100%;
+			margin: 0;
+			top: 0;
+			.navigation {
+				padding: 0;
+				font-size: 24px;
+				ul.nav li {
+					display: inline;
+					a {
+						padding: 0 10px;
+					}
+				}
+			}
+		}
+	}
+
+	.about {
+		padding: 120px 20px 0 20px;
+		.heatherMobile,
+		.heatherContactMobile {
+			display: inline;
+			float: left;
+			margin: 0 10px 0 0;
+			border-radius: 50%;
+			border: 2px solid #33ADB5;
+		}
+		p {
+			width: 100%;
+			&:nth-child(2) {
+				margin: 0;
+			}
+		}
+	}
+
+	.blog {
+		display: none;
+	}
+
+	.chart {
+		margin: 20px 0 0 0;
+		.piechart {
+			display: none;
+		}
+		.items {
+			width: 49%;
+		}
+	}
+
+	.content {
+		width: 100%;
+		float: none;
+		display: block;
+	}
+
+	.sidebar {
+		width: 100%;
+		float: none;
+		display: block;
+		z-index: -9999;
+		position: relative;
+		padding-bottom: 100px;
+		.findMe {
+			margin-top: 0;
+		}
+	}
+}
+
+/* teeny phones */
+
+@media (max-width: 430px) {
+	footer {
+		.footerInside{
+			background: none;
+			.flag {
+				display: none;
+			}
+		}
+	}
+	.about {
+		img {
+			width: 40%;
+		}
+	}
+}

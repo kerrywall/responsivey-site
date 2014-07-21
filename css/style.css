@@ -1,0 +1,678 @@
+/* partials */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: \201C \201D \2018 \2019;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, html input[type=button],
+input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, figure {
+  margin: 0;
+}
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* variables */
+/*mixins*/
+/* dev type styles */
+/* custom styles */
+* {
+  font-weight: lighter;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+body .wrapper {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+body .home {
+  background: url(../images/home-mainbg.jpg) top right no-repeat scroll;
+}
+body .contact {
+  background: url(../images/contact-mainbg.png) top center no-repeat scroll;
+  min-height: 1000px;
+}
+
+/* constant things */
+/* header */
+header {
+  padding-top: 125px;
+  font-size: 44px;
+}
+header .navigation ul.nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+header .navigation ul.nav li a {
+  text-decoration: none;
+  color: black;
+  font-weight: lighter;
+  -webkit-transition: all 1s;
+  padding-left: 45px;
+}
+header .navigation ul.nav li a:hover {
+  color: #999;
+}
+header .navigation ul.nav li a.current {
+  background: url(../images/icon-nav-active.png) 0 15px no-repeat;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  clear: both;
+  background: #666666 url(../images/bg-footer.png);
+  color: white;
+}
+footer a {
+  color: #FFDD4D;
+  text-decoration: none;
+  -webkit-transition: all 1s;
+}
+footer a:hover {
+  background: #999;
+}
+footer .footerInside {
+  background: url(../images/footer-map.png) center right no-repeat;
+  width: 100%;
+  margin: 0;
+  padding: 20px 40px;
+  position: relative;
+}
+footer .footerInside article.twitter {
+  padding-left: 45px;
+  line-height: 1.4;
+  width: 260px;
+  background: url(../images/icon-footer-twitter-40x45.png) 0 0 no-repeat;
+  margin-bottom: 30px;
+}
+footer .footerInside article.twitter:hover {
+  background-position: 0 -45px;
+  cursor: pointer;
+}
+footer .footerInside article.email {
+  padding-left: 45px;
+  line-height: 1.4;
+  width: 260px;
+  background: url(../images/icon-footer-email-40x45.png) 0 0 no-repeat;
+}
+footer .footerInside article.email:hover {
+  background-position: 0 -45px;
+  cursor: pointer;
+}
+footer .credit {
+  font-size: 12px;
+  line-height: 1.5;
+}
+footer .flag {
+  position: absolute;
+  background: url(../images/footer-ribbon-full.png) 0 0 no-repeat;
+  padding: 10px 30px 10px 10px;
+  width: auto;
+  height: 105px;
+  top: -48px;
+  right: 40px;
+  color: white;
+  font-size: 13px;
+}
+footer .flag img.heather {
+  border-radius: 50%;
+  float: left;
+}
+footer .flag p {
+  float: left;
+  width: 275px;
+  margin: 0 auto;
+  padding: 10px 0 0 10px;
+}
+
+/* homepage */
+/* blog thing */
+.blog {
+  position: absolute;
+  right: 10%;
+  top: 40%;
+  opacity: 0.7;
+  -webkit-transition: all 0.5s;
+}
+.blog:hover {
+  opacity: 1;
+  margin-top: 25px;
+}
+
+/* about/bio  */
+.about {
+  padding-left: 45px;
+}
+.about .heatherMobile,
+.about .heatherContactMobile {
+  display: none;
+}
+.about p {
+  width: 33%;
+  line-height: 2;
+  font-weight: lighter;
+  font-size: 14px;
+}
+.about p:nth-child(2) {
+  margin-bottom: 40px;
+}
+.about p.main, .about p.contactMain {
+  font-size: 20px;
+  line-height: 1.5;
+}
+.about a {
+  text-decoration: none;
+  color: #1CADB4;
+}
+.about a.black {
+  background: url(../images/bg-links.png) center right no-repeat;
+  padding: 10px 30px 10px 10px;
+  margin-top: 10px;
+  color: #FFDD4D;
+  font-weight: lighter;
+  text-decoration: none;
+  -webkit-transition: all 1s;
+}
+.about a.black:hover {
+  padding: 10px 30px 10px 30px;
+  color: #bada55;
+}
+
+/* 'my life' chart */
+.chart {
+  width: 100%;
+  background: url(../images/bg-stripe.png);
+  margin-top: 100px;
+  padding: 20px 10px 100px 10px;
+}
+.chart .piechart {
+  width: 30%;
+  float: left;
+  margin-right: 1%;
+}
+.chart .piechart img {
+  width: 100%;
+}
+.chart .items {
+  width: 33%;
+  float: left;
+  margin-left: 1%;
+  /* arrow size and colours */
+}
+.chart .items .item {
+  width: 100%;
+}
+.chart .items .arrow, .chart .items .number {
+  margin-right: 10px;
+}
+.chart .items .arrow {
+  font-size: 40px;
+  height: 40px;
+}
+.chart .items .arrow.blizzard {
+  color: #a1e8e8;
+}
+.chart .items .arrow.turquoise {
+  color: #2ae1e6;
+}
+.chart .items .arrow.verdigris {
+  color: #33adb5;
+}
+.chart .items .arrow.canary {
+  color: #fff200;
+}
+.chart .items .arrow.yellowGreen {
+  color: #72dc28;
+}
+.chart .items .arrow.lemon {
+  color: #ffde17;
+}
+.chart .items .arrow.bahia {
+  color: #acc728;
+}
+.chart .items .number {
+  font-size: 24px;
+  font-weight: lighter;
+}
+.chart .items .number .percent {
+  color: #999;
+}
+.chart img {
+  border-radius: 50%;
+  margin: -60px 0 0 0;
+}
+
+/* contact page */
+/* content block */
+.content {
+  width: 70%;
+  float: left;
+  margin-bottom: 50px;
+}
+.content .form {
+  margin-top: 10%;
+  margin-left: 1%;
+}
+.content .form input {
+  display: block;
+  width: 90%;
+  margin-bottom: 10px;
+  border: 0;
+  background: #E9F7F8;
+  border-left: 2px solid #3BD4D6;
+  padding: 10px;
+  font-weight: lighter;
+}
+.content .form input.message {
+  height: 200px;
+}
+.content .form input.submit {
+  background: url(../images/bg-links.png) center right no-repeat;
+  padding: 10px 30px 10px 10px;
+  margin-top: 10px;
+  color: #FFDD4D;
+  font-weight: lighter;
+  text-decoration: none;
+  -webkit-transition: all 1s;
+}
+.content .form input.submit, .content .form input.reset {
+  display: inline;
+  width: auto;
+  border: 0;
+}
+.content .form input.reset {
+  background-color: white;
+}
+
+/* sidebar */
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(../images/bg-stripe.png) repeat;
+  width: 30%;
+  padding: 40px;
+}
+.sidebar .tweet {
+  width: 300px;
+  height: 300px;
+  padding: 60px 40px;
+  border-radius: 50%;
+  background: RGBA(56, 212, 214, 0.85);
+  z-index: 999999;
+  margin-top: -75px;
+  margin-left: -40px;
+}
+.sidebar .tweet .date {
+  text-transform: uppercase;
+  font-size: 10px;
+}
+.sidebar .tweet .latestTweet {
+  color: white;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.sidebar .tweet .twitterName {
+  margin: 10px 0 0 125px;
+  background: url(../images/bg-links.png) center right no-repeat;
+  padding: 10px 30px 10px 10px;
+  margin-top: 10px;
+  color: #FFDD4D;
+  font-weight: lighter;
+  text-decoration: none;
+  -webkit-transition: all 1s;
+}
+.sidebar .findMe {
+  margin-top: 150px;
+}
+.sidebar .findMe h3 {
+  margin: 0;
+}
+.sidebar .findMe h3:first-child {
+  margin-top: 20px;
+}
+.sidebar .findMe h3.projects {
+  margin-top: 100px;
+}
+.sidebar .findMe p {
+  margin-top: 0;
+}
+.sidebar .findMe p a {
+  text-decoration: none;
+  color: #1CADB4;
+}
+.sidebar .findMe article {
+  padding-left: 50px;
+  height: 45px;
+}
+.sidebar .findMe article.twitter {
+  background: url(../images/icon-contact-twitter.png) 0 0 no-repeat;
+}
+.sidebar .findMe article.facebook {
+  background: url(../images/icon-contact-facebook.png) 0 0 no-repeat;
+}
+.sidebar .findMe article.linkedIn {
+  background: url(../images/icon-contact-linkedin.png) 0 0 no-repeat;
+}
+.sidebar .findMe article.email {
+  background: url(../images/icon-contact-email.png) 0 0 no-repeat;
+}
+.sidebar .findMe article.skype {
+  background: url(../images/icon-contact-skype.png) 0 0 no-repeat;
+}
+.sidebar .findMe article.hackerYou {
+  background: url(../images/icon-contact-hackeryou.png) 0 0 no-repeat;
+}
+.sidebar .findMe article.ladiesLearningCode {
+  background: url(../images/icon-contact-ladieslearningcode.png) 0 0 no-repeat;
+}
+.sidebar .findMe article.hiveToronto {
+  background: url(../images/icon-contact-hive.png) 0 0 no-repeat;
+}
+.sidebar .findMe article.womenOfDistinction {
+  background: url(../images/icon-contact-womenofdistinction.png) 0 0 no-repeat;
+}
+.sidebar .findMe article:hover {
+  background-position: 0 -45px;
+  cursor: pointer;
+}
+
+/* <dalek> RESPSONSIVATE! </dalek> */
+/* slightly narrower desktop/laptop */
+@media (max-width: 1130px) {
+  body {
+    max-width: 1130px;
+  }
+  body .wrapper {
+    width: 100%;
+  }
+}
+/* tablets */
+@media (max-width: 990px) {
+  body .home {
+    background-position: 100px 0;
+  }
+
+  .content {
+    width: 100%;
+    float: none;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    float: none;
+  }
+  .sidebar .tweet {
+    margin: 0;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+  }
+  .sidebar .tweet .latestTweet {
+    font-size: 18px;
+  }
+  .sidebar .tweet .twitterName {
+    margin: 0;
+  }
+}
+/* phones */
+@media (max-width: 768px) {
+  body .wrapper.home, body .wrapper.contact {
+    background: none;
+  }
+  body header {
+    background: #2AE1E6;
+    padding: 0 0 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    top: 0;
+  }
+  body header .navigation {
+    padding: 0;
+    font-size: 24px;
+  }
+  body header .navigation ul.nav li {
+    display: inline;
+  }
+  body header .navigation ul.nav li a {
+    padding: 0 10px;
+  }
+
+  .about {
+    padding: 120px 20px 0 20px;
+  }
+  .about .heatherMobile,
+  .about .heatherContactMobile {
+    display: inline;
+    float: left;
+    margin: 0 10px 0 0;
+    border-radius: 50%;
+    border: 2px solid #33ADB5;
+  }
+  .about p {
+    width: 100%;
+  }
+  .about p:nth-child(2) {
+    margin: 0;
+  }
+
+  .blog {
+    display: none;
+  }
+
+  .chart {
+    margin: 20px 0 0 0;
+  }
+  .chart .piechart {
+    display: none;
+  }
+  .chart .items {
+    width: 49%;
+  }
+
+  .content {
+    width: 100%;
+    float: none;
+    display: block;
+  }
+
+  .sidebar {
+    width: 100%;
+    float: none;
+    display: block;
+    z-index: -9999;
+    position: relative;
+    padding-bottom: 100px;
+  }
+  .sidebar .findMe {
+    margin-top: 0;
+  }
+}
+/* teeny phones */
+@media (max-width: 430px) {
+  header ul.nav {
+    font-size: 16px;
+  }
+
+  footer .footerInside {
+    background: none;
+    padding: 20px 40px;
+  }
+  footer .footerInside .flag {
+    display: none;
+  }
+
+  header {
+    font-size: 16px;
+  }
+
+  .about img {
+    width: 40%;
+  }
+}
